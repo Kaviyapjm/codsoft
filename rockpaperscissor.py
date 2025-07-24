@@ -14,14 +14,14 @@ def decide_winner(user, computer):
     return outcomes[user][computer]
 
 def display_result(user, computer, result):
-    print(f"\n🧑 You chose: {user}")
-    print(f"🤖 Computer chose: {computer}")
+    print(f"\nYou chose: {user}")
+    print(f"Computer chose: {computer}")
     if result == 'win':
-        print("🎉 You win this round!")
+        print("You win this round!")
     elif result == 'lose':
-        print("💥 You lost this round!")
+        print("You lost this round!")
     else:
-        print("😐 It's a tie!")
+        print("It's a tie!")
 
 def valid_choice(choice):
     return choice in ['rock', 'paper', 'scissors']
@@ -31,7 +31,7 @@ def play_game():
     computer_score = 0
     round_no = 1
 
-    print("Welcome to Rock-Paper-Scissors Game 🎮")
+    print("Welcome to Rock-Paper-Scissors Game")
     print("Type 'rock', 'paper', or 'scissors' to play.")
     print("Type 'exit' anytime to quit.\n")
 
@@ -40,12 +40,12 @@ def play_game():
         user_input = input("Your move: ").strip().lower()
 
         if user_input == 'exit':
-            print("\n👋 Exiting game. Final Score:")
-            print(f"🧑 You: {user_score} | 🤖 Computer: {computer_score}")
+            print("\nExiting game. Final Score:")
+            print(f"You: {user_score} | Computer: {computer_score}")
             break
 
         if not valid_choice(user_input):
-            print("⚠️ Invalid choice. Try again.\n")
+            print("Invalid choice. Try again.\n")
             continue
 
         computer_input = get_computer_choice()
@@ -57,7 +57,7 @@ def play_game():
         elif result == 'lose':
             computer_score += 1
 
-        print(f"Score ➤ You: {user_score} | Computer: {computer_score}\n")
+        print(f"Score > You: {user_score} | Computer: {computer_score}\n")
         round_no += 1
 
 if __name__ == "__main__":
