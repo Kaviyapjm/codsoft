@@ -9,12 +9,12 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        return "⚠️ Error: Division by zero"
+        return "Error: Division by zero"
     return a / b
 
 def modulus(a, b):
     if b == 0:
-        return "⚠️ Error: Modulus by zero"
+        return "Error: Modulus by zero"
     return a % b
 
 def power(a, b):
@@ -25,17 +25,17 @@ def get_number(prompt):
         try:
             return float(input(prompt))
         except ValueError:
-            print("❌ Invalid input. Please enter a number.")
+            print("Invalid input. Please enter a number.")
 
 def show_menu():
     print("\n=== Simple Calculator ===")
-    print("1. ➕ Addition")
-    print("2. ➖ Subtraction")
-    print("3. ✖️ Multiplication")
-    print("4. ➗ Division")
-    print("5. % Modulus")
-    print("6. ^ Exponentiation")
-    print("7. 🚪 Exit")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Modulus")
+    print("6. Exponentiation")
+    print("7. Exit")
 
 def main():
     while True:
@@ -43,7 +43,7 @@ def main():
         choice = input("Choose an operation (1-7): ").strip()
 
         if choice == '7':
-            print("👋 Exiting calculator. Goodbye!")
+            print("Exiting calculator. Goodbye!")
             break
 
         num1 = get_number("Enter first number: ")
@@ -64,10 +64,10 @@ def main():
         elif choice == '6':
             result = power(num1, num2)
         else:
-            print("❌ Invalid choice. Please try again.")
+            print("Invalid choice. Please try again.")
             continue
 
-        print(f"🧮 Result: {result}")
+        print(f"Result: {result}")
 
 if __name__ == "__main__":
     main()
